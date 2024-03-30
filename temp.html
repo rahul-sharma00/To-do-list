@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-image: url(bg3.jpg);
+            height: 100vh;
+            width: 100vw;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #fff;
+            text-shadow: 0px 0px 5px #000;
+            border-bottom: 2px solid gray;
+            width: 100%;
+            text-align: center;
+        }
+
+        .list {
+            width: 50vw;
+            box-shadow: 0px 0px 5px #000;
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .in {
+            margin: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        button {
+            width: 80px;
+            padding: 5px;
+            color: rgb(1, 68, 1);
+            font-weight: bold;
+            border: 2px solid;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: rgb(1, 68, 1);
+            color: #fff;
+        }
+
+        input {
+            width: 60%;
+            padding: 5px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 0px 5px;
+        }
+
+        ul {
+            margin: 20px;
+            width: 50%;
+            background: #fff;
+            list-style: disc;
+            box-shadow: 0px 0px 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        ul li {
+            list-style: none;
+            padding: 5px;
+            border-bottom: 1px solid gray;
+            color: #252525;
+        }
+
+        @media (max-width:550px) {
+            input{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            button{
+                width: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="list">
+            <h1>To do list</h1>
+            <div class="in">
+                <input type="text" id="input" placeholder="Enter your task">
+                <button onclick="add()">Add</button>
+
+            </div>
+            <ul id="ul">
+
+            </ul>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        let input = document.getElementById("input");
+        let ul = document.getElementById("ul");
+        let i = 1;
+
+
+        function add() {
+            const node = document.createElement("li");
+            const txt = input.innerHTML;
+            node.innerHTML = i + ". " + input.value;
+            i++;
+            ul.appendChild(node);
+            input.value = '';
+        }
+
+    </script>
+</body>
+
+</html>
