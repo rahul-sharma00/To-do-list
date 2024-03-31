@@ -22,7 +22,7 @@ header p{
 }
 
 .container {
-    background-image: url(bg3.jpg);
+    background-image: url(bg.png);
     height: 90vh;
     width: 100vw;
     background-size: cover;
