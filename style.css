@@ -3,9 +3,27 @@
     padding: 0;
 }
 
+body{
+    overflow-x: hidden;
+}
+
+header{
+  width: 100vw;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  justify-content: right;
+}
+
+header p{
+    margin-right: 50px;
+}
+
 .container {
     background-image: url(bg3.jpg);
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     background-size: cover;
     display: flex;
